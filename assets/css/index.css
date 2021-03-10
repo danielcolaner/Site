@@ -1,0 +1,67 @@
+html, body { 
+    background-color: #1f1f1f;
+    background-image: url(/assets/img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    height: 100%;
+}
+
+@keyframes push-in {
+    from { opacity: 0; margin-top: 3%;}
+    to   { opacity: 1; margin-top: 0%;}   
+}
+
+a {
+    color: #fff;
+    opacity: 0.9;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+    transition: text-shadow 0.25s;
+    transition: opacity 0.25s;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    opacity: 1;
+    text-shadow: 1px 1px 3px #ccc;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.text {
+    font-size: 32pt;
+    color: #fff;
+    line-height: 0.8;
+}
+
+.subtext {
+    font-size: 20pt;
+    color: #fff;
+    opacity: 0.9;
+    line-height: 0.8;
+}
+
+.links {
+    font-size: 16pt;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.box { 
+    background:rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.5));
+    padding: 16px 20px;
+    animation: push-in 0.5s;
+}

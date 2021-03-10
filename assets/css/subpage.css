@@ -1,0 +1,91 @@
+html, body { 
+    background-color: #1f1f1f;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    height: 100%;
+    font-size: 1.1em;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+a {
+    color: #fff;
+    opacity: 0.9;
+    transition: text-shadow 0.25s;
+    transition: opacity 0.25s;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    opacity: 1;
+    text-shadow: 1px 1px 3px #ccc;
+}
+
+.navbar { /* make this stick to the top of the screen*/
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    width: 100%;
+    font-size: 1.25em;
+}
+
+.bio {
+    max-width: 1000px;
+    animation: fade-in 0.5s;
+}
+
+.content, .form {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    animation: fade-in 0.5s;
+}
+
+.header {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    font-weight: 500;
+}
+
+.page-name {
+    font-weight: 200;
+}
+
+.nav {
+    padding-right: 10px;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.name-box, .email-box {
+    width: 200px;
+    margin: 10px;
+}
+
+.message-box {
+    margin: 10px;
+    width: 600px;
+    height: 300px;
+}
+
+.submit {
+    background-color: #3f3f3f; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
