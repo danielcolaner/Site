@@ -1,12 +1,17 @@
-html, body { 
-    background-color: #1f1f1f;
-    color: #fff;
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    height: 100%;
+:root {
+    --fg: white;
+    --bg: #1f1f1f;
+    --bg-secondary: #3f3f3f;
 }
 
-@keyframes fade-in {
+html, body { 
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+@keyframes fade-in { /* currently unused, I believe */
     from { opacity: 0; }
     to   { opacity: 1; }
 }
@@ -23,6 +28,7 @@ input[type="textarea"] {
 a {
     color: #fff;
     opacity: 0.9;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
     transition: text-shadow 0.25s;
     transition: opacity 0.25s;
 }
@@ -33,15 +39,38 @@ a:hover {
     text-shadow: 1px 1px 3px #ccc;
 }
 
-.navbar { /* make this stick to the top of the screen*/
-    backdrop-filter: blur(4px);
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 0 0 10px 10px;
+.header {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
-    align-items: center;  
-    width: 100%;
-    font-size: 1.25em;
+    align-items: center;
+    background:rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    border-radius: 0px 0px 10px 10px;
+    padding: 5px 10px;
+}
+
+.header > .nav {
+    text-align: right;
+}
+
+.header > .branding > #text {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.header > .branding > #subtext {
+    font-size: 1em;
+    color: #fff;
+    opacity: 0.9;
+    line-height: 0.8;
+}
+
+.header > .nav > #links > a {
+    color: white;
+    font-size: 0.75;    
+    padding: 3px;
+    text-decoration: none;
 }
 
 .bio {
@@ -55,7 +84,6 @@ a:hover {
     justify-content: center; 
     align-items: center;
     text-align: center;
-    animation: fade-in 0.5s;
 }
 
 .content a {
@@ -76,10 +104,7 @@ a:hover {
 }
 
 .header {
-    padding-top: 5px;
-    padding-left: 10px;
-    padding-bottom: 5px;
-    font-weight: 500;
+    padding: 5px 10px;
 }
 
 .page-name {
@@ -87,21 +112,20 @@ a:hover {
 }
 
 .nav {
-    padding-right: 10px;
     text-align: right;
     color: rgba(255, 255, 255, 0.5)
 }
 
 #name, #email, #message-box {
-    width: 200px;
-    margin: 5px;
+    margin-bottom: 5px;
     border-radius: 5px;
     font-size: 1em;
 }
 
 #message-box {
     height: 250px;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     margin-bottom: 10px;
 }
 

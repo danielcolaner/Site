@@ -1,6 +1,86 @@
+* {box-sizing: border-box;}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 400px;
+    position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+  
+
+.mySlides img {
+    border-radius: 5px;
+}
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.25s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+  
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+  
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade-in-out;
+    -webkit-animation-duration: 10s;
+    animation-name: fade-in-out;
+    animation-duration: 10s;
+}
+  
+@-webkit-keyframes fade-in-out {
+    0% {opacity: 0}
+    10% {opacity: 1}
+    90% {opacity: 1}
+    100% {opacity: 0}
+}
+  
+@keyframes fade-in-out {
+    0% {opacity: 0}
+    10% {opacity: 1}
+    90% {opacity: 1}
+    100% {opacity: 0}
+}
+
 :root {
     --fg: white;
     --bg: #1f1f1f;
+    --bg-secondary: #ccc;
+    --link: #8dbcfa;
+    --link-shadow: #3e5675;
 }
 
 html, body { 
@@ -10,7 +90,7 @@ html, body {
     margin: 0;
 }
 
-@keyframes push-in {
+@keyframes push-in { /* unused? */
     from { opacity: 0; margin-top: 3%;}
     to   { opacity: 1; margin-top: 0%;}   
 }
@@ -20,16 +100,24 @@ input {
 }
 
 a {
-    color: #fff;
+    color: var(--link);
     opacity: 0.9;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
     transition: text-shadow 0.25s;
     transition: opacity 0.25s;
+    
 }
 
 a:hover {
-    color: #fff;
     opacity: 1;
+    text-shadow: 1px 1px 1px var(--link-shadow);
+}
+
+.header a {
+    color: var(--fg);
+}
+
+.header a:hover {
     text-shadow: 1px 1px 3px #ccc;
 }
 
@@ -41,7 +129,7 @@ a:hover {
     background:rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(4px);
     border-radius: 0px 0px 10px 10px;
-    padding: 10px 20px;
+    padding: 5px 10px;
 }
 
 .header > .nav {
@@ -79,10 +167,10 @@ a:hover {
 
 .flexbox > .image > #headshot {
     border-radius: 10px;
-    max-height: 600px;
+    max-height: 600px
 }
 
 .flexbox > #bio-text {
     max-width: 750px;
-    padding: 20px;
+    padding: 10px 0px 10px 20px;
 }

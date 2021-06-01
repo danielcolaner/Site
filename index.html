@@ -5,7 +5,7 @@
     <title>Daniel Colaner</title>
     <link rel="stylesheet" type="text/css" href="/assets/css/index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;400i;500&display=swap" rel="stylesheet"> 
     <meta charset="UTF-8">
     <meta content="Daniel Colaner" property="og:title">
     <meta content="The site of Daniel Colaner, a nationally recognized pianist and organist" property="og:description">
@@ -18,27 +18,65 @@
    <div class="header"> 
         <div class="branding">
             <span id="text">Daniel Colaner,</span>
-            <span id="subtext">pianist and organist</span>
+            <span id="subtext">organist and pianist</span>  
         </div>
         <div class="nav">
-            <span id="links"><a href="contact.html">contact</a><a href="https://instagram.com/daniel.colaner">instagram</a></span>
+            <span id="links"><a href="contact.html">contact</a> • <a href="https://instagram.com/daniel.colaner">instagram</a></span>
         </div>
     </div>
     <div class="flexbox">
-        <div class="image">
-            <img id="headshot" src="assets/img/headshot.jpg">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="assets/img/headshot-organ.jpg" style="width: 100%;">
+            </div>
+            <div class="mySlides fade">
+                <img src="assets/img/headshot-piano.jpg" style="width: 100%;">
+            </div>
+            <script>
+                var slideIndex = 0; 
+                    showSlides(slideIndex);
+                
+                // Next/previous controls
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+                
+                // Thumbnail image controls
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+                
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) {slideIndex = 1}    
+                    slides[slideIndex-1].style.display = "block"; 
+                    setTimeout(showSlides, 10000)
+                }; // Change image every 8 seconds
+
+            </script>
         </div>
-            <div id="bio-text">At 16, Daniel Colaner has already achieved national recognition as an organist.  <i>The Diapason</i> magazine recently named him among their “20 Under 30” Class of 2021, a select group of young adults at the forefront of the organ field.  Diagnosed with stage IV cancer as an infant, exposure to  music as cognitive therapy combined with his love of sound unleashed his passion for the piano at age 5 and organ at age 10.  Daniel captured international media attention with his piano performance at Carnegie Hall and on organ at St. Patrick’s Cathedral on the same day in 2017.  He has been a featured performer on <i>ABC World News Tonight</i>, <i>Good Morning America</i>, <i>The Harry (Connick Jr.) Show</i>, and the BBC World Service <i>Newsday</i>.<br><br>
-
-            As a recipient of the prestigious Jack Kent Cooke Young Artist Award, Daniel performed “Jupiter” from Gustav Holst’s The Planets on the NPR radio show From the Top (Show #377).  He was the First Prize and Audience Prize winner in the Sursa American Organ Competition (HS Division) in 2019 and winner of the Preparatory Concerto Competition at the Cleveland Institute of Music on piano in 2020.  Earlier this year, Daniel was named a National YoungArts Winner in Organ/Classical  Music.<br><br>
-
-            Daniel was selected as the organ soloist in the debut of <i>Variations on Doxology</i>, a new work for organ and orchestra with the American Pops   Orchestra under the direction of Maestro Luke Frasier. His performance will be featured in <i>One Voice: The Songs We Share</i> to be aired nationally on PBS in the spring of 2021.<br><br>
-
-            Daniel is a student of Dr. David Higgs of the Eastman School of Music and a Pre-College student at the Cleveland Institute of Music where he studies piano, music theory, and chamber music.  He currently serves as Organ Scholar at Cleveland’s Trinity Episcopal Cathedral under Todd Wilson and as an auxiliary organist  at St. Paul’s Episcopal Church in Canton, Ohio.<br><br>
-
-            Daniel has continued to promote the organ and the study of classical music on television and radio, in addition to helping to raise thousands of dollars for music education and music therapy for a variety of non-profit organizations.  In his spare time, Daniel enjoys computer programming, repairing electronics, jazz improvisation, playing tennis, and the company of his calico cat, Imogene.
+        
+        <!-- <div class="image">
+            <img id="headshot" src="assets/img/headshot-organ.jpg">
+        </div> -->
+        <div id="bio-text">
+            At 16, Daniel Colaner has already achieved national recognition as an organist and pianist. <i>The Diapason</i> magazine recently named him among their <a href="/docs/The Diapason - 20 Under 30, Class of 2021.pdf">“20 Under 30” Class of 2021</a>, a select group of young adults at the forefront of the organ field. At the age of 12, Daniel captured international media attention with performances on piano at Carnegie Hall and on organ at St. Patrick's Cathedral on the same day. Since then, his talents have been showcased on <a href="https://abcnews.go.com/WNT/video/12-year-takes-talents-worlds-prestigious-stages-51397063"><i>ABC World News Tonight</i></a>, <a href="https://twitter.com/GMA/status/935142383515156480"><i>Good Morning America</i></a>, <a href="https://youtu.be/8NLKsSWN2Vk"><i>The Harry (Connick Jr.) Show</i></a>, and the <a href="https://www.bbc.co.uk/programmes/p05s33r0"><i>BBC World Service Newsday</i></a>. 
+            <br><br>
+            As an organist, Daniel has been featured on the NPR radio show <a href="https://soundcloud.com/fromthetop-1/15-year-old-organist-daniel"><i>From the Top</i></a> (Show #377), performing “Jupiter” from Gustav Holst’s The Planets, and on PBS, performing Doxology Variations with the American Pops Orchestra in <a href="https://www.pbs.org/video/the-sacred-tllkhz/"><i>One Voice: The Songs We Share – The Sacred</i></a>. He was the recipient of the prestigious Jack Kent Cooke Young Artist Award in 2020 and named a 2021 National YoungArts Winner in Organ/Classical Music. He was also the 1st Prize and Audience Prize Winner in the <a href="https://youtu.be/9-djq22SO84">Sursa American Organ Competition</a> (HS Division) in 2019.
+            <br><br>
+            As a pianist, Daniel has been the winner of numerous competitions and awards including the American Protégé Piano Competition, the OhioMTA Buckeye Piano Competition, the Steinway Junior Piano Competition, and the <a href="https://youtu.be/MrspsiwrtYo">Cleveland Institute of Music Preparatory Concerto Competition</a>.
+            <br><br>
+            Exposed to music as cognitive therapy after being diagnosed with stage IV cancer as an infant, Daniel is passionate about promoting the study of classical music on television and radio, in addition to helping to raise thousands of dollars for music education and music therapy for a variety of non-profit organizations. 
+            <br><br>
+            Daniel studies organ with David Higgs of the Eastman School of Music and piano with Sean Schulze at the Cleveland Institute of Music. In addition to being an avid chamber musician, Daniel currently serves as Organ Scholar at Cleveland’s Trinity Episcopal Cathedral under Todd Wilson and as an auxiliary organist at St. Paul’s Episcopal Church in Canton, Ohio.
+            <br><br>
+            In his spare time, Daniel enjoys computer programming, repairing electronics, jazz improvisation, playing tennis, and the company of his calico cat, Imogene.
         </div>
-    </div>
     </div>
 </body>
 
