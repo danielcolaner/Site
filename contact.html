@@ -10,23 +10,22 @@
     <meta content="Daniel Colaner - contact" property="og:title">
     <meta content="The site of Daniel Colaner, a nationally recognized pianist and organist" property="og:description">
     <meta content="danielcolaner.com" property="og:site_name">
-    <meta content="summary" property="twitter:card">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <div class="navbar">
         <span class="header"><a href="/">Daniel Colaner</a> <span class="page-name">contact me</span></span>
-        <span class="nav"><a href="/bio.html">bio</a> • <a href="/contact.html">contact</a></span>
     </div>
     <div class="content">
-        <p class=text>You can reach me by email at mdcolaner (at) yahoo (dot) com, or with the contact form below.</p>
+        <p>You can reach me on <a href="https://instagram.com/daniel.colaner">Instagram</a>, <a href="facebook.com/DanielColaner">Facebook</a>, or with the contact form below.</p>
     </div>
-    <div class="form">
+    <div class="form-container">
         <form action="https://formspree.io/f/xeqpygqr" method="POST">
-            <span>Your name: <br><input class="name-box" type="text" name="name"></span><br>
-            <span>Your email: <br><input class="email-box" type="text" name="_replyto"></span><br>
-            <span>Your message: <br><textarea class="message-box" rows="10" columns="100" name="message"></textarea><br><br>
-            <input class="submit" type="submit" value="Send">
+            <input id="name" type="text" name="name" placeholder="Your name" required></input>
+            <input id="email" type="text" name="_replyto" placeholder="Your email address" required></input><br>
+            <textarea id="message-box" name="message" placeholder="Your message" required></textarea><br>
+            <input class="submit" type="submit" value="Send"></input><br>
           </form>
     </div>
 </body>

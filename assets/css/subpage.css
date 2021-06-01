@@ -4,7 +4,6 @@ html, body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     height: 100%;
-    font-size: 1.1em;
 }
 
 @keyframes fade-in {
@@ -12,12 +11,20 @@ html, body {
     to   { opacity: 1; }
 }
 
+@keyframes btn-onhover {
+    from { background-color: #3f3f3f; color: white }
+    to   { background-color: lightgray; color: black }
+}
+
+input[type="textarea"] {
+    font-family: 'Inter', sans-serif;
+}
+
 a {
     color: #fff;
     opacity: 0.9;
     transition: text-shadow 0.25s;
     transition: opacity 0.25s;
-    text-decoration: none;
 }
 
 a:hover {
@@ -51,6 +58,23 @@ a:hover {
     animation: fade-in 0.5s;
 }
 
+.content a {
+    text-decoration: underline;
+}
+
+.form-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-container input, textarea {
+    font-family: "Inter", sans-serif
+}
+
 .header {
     padding-top: 5px;
     padding-left: 10px;
@@ -68,24 +92,35 @@ a:hover {
     color: rgba(255, 255, 255, 0.5)
 }
 
-.name-box, .email-box {
+#name, #email, #message-box {
     width: 200px;
-    margin: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 1em;
 }
 
-.message-box {
-    margin: 10px;
-    width: 600px;
-    height: 300px;
+#message-box {
+    height: 250px;
+    width: 500px;
+    margin-bottom: 10px;
 }
+
 
 .submit {
-    background-color: #3f3f3f; /* Green */
-    border: none;
     color: white;
+    background-color: #3f3f3f;
+    border: none;
     padding: 12px 24px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    border-radius: 5px;
   }
+
+.submit:hover {
+    background-color: lightgray;
+    color: black;
+    transition: color 0.5s;
+    transition: background-color 0.5s;
+}

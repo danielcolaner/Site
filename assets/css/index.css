@@ -1,18 +1,22 @@
+:root {
+    --fg: white;
+    --bg: #1f1f1f;
+}
+
 html, body { 
-    background-color: #1f1f1f;
-    background-image: url(/assets/img/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: white;
+    background-color: var(--bg);
+    color: var(--fg);
     font-family: 'Inter', sans-serif;
     margin: 0;
-    height: 100%;
 }
 
 @keyframes push-in {
     from { opacity: 0; margin-top: 3%;}
     to   { opacity: 1; margin-top: 0%;}   
+}
+
+input {
+    font: Inter;
 }
 
 a {
@@ -21,7 +25,6 @@ a {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
     transition: text-shadow 0.25s;
     transition: opacity 0.25s;
-    text-decoration: none;
 }
 
 a:hover {
@@ -30,38 +33,56 @@ a:hover {
     text-shadow: 1px 1px 3px #ccc;
 }
 
-.content {
+.header {
     display: flex;
-    flex-direction: column;
-    justify-content: center; 
+    flex-flow: row wrap;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    height: 100%;
+    background:rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px 20px;
 }
 
-.text {
-    font-size: 32pt;
+.header > .nav {
+    text-align: right;
+}
+
+.header > .branding > #text {
+    font-size: 1.5em;
     color: #fff;
-    line-height: 0.8;
 }
 
-.subtext {
-    font-size: 20pt;
+.header > .branding > #subtext {
+    font-size: 1em;
     color: #fff;
     opacity: 0.9;
     line-height: 0.8;
 }
 
-.links {
-    font-size: 16pt;
-    color: rgba(255, 255, 255, 0.5);
+.header > .nav > #links > a {
+    color: white;
+    font-size: 0.75;    
+    padding: 3px;
+    text-decoration: none;
 }
 
-.box { 
-    background:rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
+.flexbox {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.flexbox > .image > #headshot {
     border-radius: 10px;
-    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.5));
-    padding: 16px 20px;
-    animation: push-in 0.5s;
+    max-height: 600px;
+}
+
+.flexbox > #bio-text {
+    max-width: 750px;
+    padding: 20px;
 }
