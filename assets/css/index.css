@@ -1,8 +1,11 @@
 * {box-sizing: border-box;}
 
-/* Slideshow container */
+/* Fairly simple slideshow
+Don't use this code as any kind of example,
+it's extremely hacky but at least it sort of works */
 .slideshow-container {
     max-width: 400px;
+    min-height: 604px;
     position: relative;
 }
 
