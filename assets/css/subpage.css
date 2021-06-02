@@ -1,13 +1,13 @@
 :root {
     --fg: white;
-    --bg: #1f1f1f;
+    --bg: #1a1a1a;
     --bg-secondary: #3f3f3f;
 }
 
 html, body { 
     background-color: var(--bg);
     color: var(--fg);
-    font-family: 'Inter', sans-serif;
+    font-family: 'ZCOOL XiaoWei', sans-serif;
     margin: 0;
 }
 
@@ -19,10 +19,6 @@ html, body {
 @keyframes btn-onhover {
     from { background-color: #3f3f3f; color: white }
     to   { background-color: lightgray; color: black }
-}
-
-input[type="textarea"] {
-    font-family: 'Inter', sans-serif;
 }
 
 a {
@@ -42,7 +38,7 @@ a:hover {
 .header {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background:rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(4px);
@@ -66,28 +62,12 @@ a:hover {
     line-height: 0.8;
 }
 
-.header > .nav > #links > a {
-    color: white;
-    font-size: 0.75;    
-    padding: 3px;
-    text-decoration: none;
-}
-
-.bio {
-    max-width: 1000px;
-    animation: fade-in 0.5s;
-}
-
 .content, .form {
     padding-top: 10px;
     display: flex;
     justify-content: center; 
     align-items: center;
     text-align: center;
-}
-
-.content a {
-    text-decoration: underline;
 }
 
 .form-container {
@@ -131,20 +111,21 @@ a:hover {
 
 
 .submit {
+    border-radius: 5px;
     color: white;
     background-color: #3f3f3f;
     border: none;
+    display: inline-block;
+    font-size: 16px;
     padding: 12px 24px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
   }
 
 .submit:hover {
     background-color: lightgray;
     color: black;
+    cursor: pointer;
     transition: color 0.5s;
     transition: background-color 0.5s;
 }

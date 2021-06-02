@@ -1,0 +1,57 @@
+:root {
+    --fg: white;
+    --bg: #1a1a1a;
+    --bg-secondary: #3f3f3f;
+}
+
+html, body { 
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: 'ZCOOL XiaoWei', sans-serif;
+    font-size: 1.5em;
+    margin: 0;
+    height: 100%;
+}
+
+a {
+    color: #fff;
+    opacity: 0.9;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+    transition: text-shadow 0.25s;
+    transition: opacity 0.25s;
+}
+
+a:hover {
+    color: #fff;
+    opacity: 1;
+    text-shadow: 1px 1px 3px #ccc;
+}
+
+
+.not-found, .not-found-bg {
+	display: flex;
+	flex-flow: column wrap;
+    justify-content: center;
+    height: 100%;
+    margin-left: 10vw;
+}
+
+.not-found-bg {
+    color: white;
+    font-family: "Inter", sans-serif;
+    position: absolute;
+    z-index: auto; /* this works somehow, i won't question it */
+    opacity: 0.25;
+    font-size: 5em;
+    font-weight: bold;
+}
+
+.not-found > #text {
+    text-shadow: 1px 1px 3px var(--shadow);
+}
+
+.not-found > #return {
+    font-size: 0.6em;
+    opacity: 0.75;
+    z-index: 1;
+}
