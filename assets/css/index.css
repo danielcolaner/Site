@@ -98,6 +98,10 @@ a:hover {
     line-height: 0.8;
 }
 
+.header > #events {
+    font-size: 1.25em;
+}
+
 .nav {
     display: flex;
     flex-flow: row wrap;
