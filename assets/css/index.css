@@ -95,7 +95,8 @@ a:hover {
 }
 
 .header > #subtext {
-    font-family: "Clicker Script", sans-serif;
+    /* font-family: "Clicker Script", sans-serif; */
+    font-family: 'ZCool XiaoWei', sans-serif;
     font-size: 2.5em;
     color: #fff;
     opacity: 0.9;
